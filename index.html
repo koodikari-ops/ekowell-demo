@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ekowell Oy | Älä vaihda koko maalämpöpumppua — Uudista sen sydän ja säästä yli 10 000 EUR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="static/css/obsidian_cryotech.css" />
+</head>
+<body>
+  <div class="campaign-ribbon">
+    <span class="pulse-dot"></span>
+    <span>Ekowellin huoltoauto kiertää nyt maakunnissa — Matkakulut 0 EUR ennakkoreitityksellä</span>
+    <a href="#reitit" class="ribbon-link">Katso alueesi vapaat paikat -></a>
+  </div>
+  <div class="ab-switcher-bar">
+    <div class="ab-switcher-inner">
+      <span class="ab-label">A/B-TESTIN ASIAKASTULOKULMA:</span>
+      <div id="ab-tabs-container" class="ab-tabs"></div>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand-block">
+        <span class="brand-logo">EKOWELL</span>
+        <span class="brand-tagline">Suomalainen maalämpötehdas jo 20 vuotta | Rovaniemi &amp; koko Suomi</span>
+      </a>
+      <nav class="main-nav"><a href="#oireet">Oireet</a><a href="#vertailu">Miksi vain kompressori?</a><a href="#reitit">Huoltoreitit</a><a href="#laskuri">Säästölaskuri</a></nav>
+      <div class="header-actions">
+        <a href="tel:0400398963" class="phone-pill"><svg viewBox="0 0 24 24" class="icon-svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>0400 398 963</span></a>
+        <a href="#varaus" class="btn-primary btn-sm">Pyydä maksuton arvio</a>
+      </div>
+    </div>
+  </header>
+  <section class="hero-showcase">
+    <div class="hero-backdrop"></div>
+    <div class="hero-container">
+      <div class="hero-copy">
+        <div class="eyebrow-pill"><span class="pulse-dot"></span><span id="hero-eyebrow-text">Ennakoiva kompressorinvaihto suoraan valmistajalta — Matkakulut 0 EUR reitillä</span></div>
+        <h1 id="hero-headline">Älä vaihda koko maalämpöpumppua. <span class="text-gradient">Uudista vain sen sydän</span> ja säästä yli 10 000 euroa.</h1>
+        <p id="hero-lead-text" class="hero-lead">Maalämpöpumppusi lämpökaivo, kuparikierukat ja suljetussa hapettomassa kierrossa toimiva runko kestävät vuosikymmeniä. Kun 12–18 vuotta palvellut kompressori päivitetään uuteen tehdasmoduuliin <strong>yhdessä työpäivässä</strong>, saat uuden laitteen tehon murto-osalla uuden hinnasta.</p>
+        <div class="hero-cta-row"><a href="#varaus" id="hero-primary-cta" class="btn-primary">Laske oma säästösi ja varaa maksuton arvio</a><a href="tel:0400398963" class="btn-secondary">Soita suoraan tehtaalle 0400 398 963</a></div>
+        <blockquote id="hero-testimonial" class="hero-quote">"Meille tarjottiin jo 15 500 euron täysremonttia. Ekowell vaihtoi pelkän kompressorin päivässä ja säästimme yli 11 000 euroa." — Omakotiasukas, Pirkanmaa</blockquote>
+        <div class="hero-trust-strip">
+          <div class="trust-item"><svg viewBox="0 0 24 24" class="icon-svg"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><div><strong>1 työpäivän asennus</strong><span>Lämmitys ei katkea pakkasella</span></div></div>
+          <div class="trust-item"><svg viewBox="0 0 24 24" class="icon-svg"><path d="M12 2L4 6v6c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V6l-8-4z"/><path d="M9 12l2 2 4-4"/></svg><div><strong>Suora tehdastakuu</strong><span>Ekowell Oy, Rovaniemi</span></div></div>
+          <div class="trust-item"><svg viewBox="0 0 24 24" class="icon-svg"><path d="M3 10h18M7 15h4M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg><div><strong>Kotitalousvähennys</strong><span>Työn osuudesta verotukseen</span></div></div>
+        </div>
+      </div>
+      <div class="hero-visual-card">
+        <img id="hero-photo" src="static/images/ekowell_huoltoauto_talvi.jpg" alt="Ekowell Oy tehdashuolto" class="hero-photo" />
+        <div class="hero-photo-caption">
+          <span id="hero-photo-tag" class="caption-tag">VALTAKUNNALLINEN TEHDASHUOLTO</span>
+          <strong id="hero-photo-title">Huoltoautomme palvelevat kaikkialla Suomessa</strong>
+          <p id="hero-photo-desc">Uudistamme Ekowell EVD- ja EVT-mallien lisäksi myös muut maalämpöpumput 20 vuoden tehdaskokemuksella.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main class="content-flow">
+    <section id="oireet" class="section-block">
+      <div class="section-intro">
+        <span class="section-kicker">TUNNISTA ENNAKKOMERKIT AJOISSA</span>
+        <h2>3 merkkiä siitä, että maalämpöpumppusi kompressori kaipaa huomiota</h2>
+        <p>12–18 vuoden iässä kompressori on tehnyt yli 40 000 käyttötuntia. Kun toimit ennen täysrikkoa, vältät kylmän kodin ja kalliin hätäpäivystyksen.</p>
+      </div>
+      <div class="symptom-grid">
+        <article class="symptom-card">
+          <img src="static/images/ekowell_lammin_koti.jpg" alt="Lämmin suomalainen koti talvipakkasella" class="symptom-img" />
+          <div class="symptom-body"><span class="symptom-step">MERKKI 01 — LÄMMIN KÄYTTÖVESI JA SÄHKÖLASKU</span><h3>Suihkuvesi haalenee ja sähkölasku hiipii ylös</h3><p>Kun kompressorin puristusteho hiipuu, kuumakaasun tulistuskierukka ei enää saa täyttä 100 asteen lämpöä. Silloin sähkövastus kytkeytyy salaa päälle ja nostaa sähkölaskua.</p><div class="symptom-metric"><span>Tyypillinen vaikutus</span><strong>+18–25 % sähkölaskuun</strong></div></div>
+        </article>
+        <article class="symptom-card">
+          <img src="static/images/ekowell_asentaja_huolto.png" alt="Ekowell-asiantuntija tarkastamassa maalämpöpumppua" class="symptom-img" />
+          <div class="symptom-body"><span class="symptom-step">MERKKI 02 — KÄYNTIJAKSOT JA ÄÄNIMAAILMA</span><h3>Pumppu käy lähes tauotta tai ääni on muuttunut</h3><p>Mekaaninen kuluma ja laakerivälykset muuttavat käyntiääntä kodinhoitohuoneessa tai teknisessä tilassa. Pumppu käy yötä päivää saavuttaakseen pyydetyn lämpötilan.</p><div class="symptom-metric"><span>Käyntiaika pakkasella</span><strong>Jopa 22 h / vrk</strong></div></div>
+        </article>
+        <article class="symptom-card">
+          <img src="static/images/ekowell_perhe_mielenrauha.jpg" alt="Perheen mielenrauha lämpimän kodin pihalla" class="symptom-img" />
+          <div class="symptom-body"><span class="symptom-step">MERKKI 03 — TALVIPAKKASEN RISKI</span><h3>Huoli talvipakkasen yllätysrikosta</h3><p>Kulunut kompressori pettää aina kovimmalla -25 asteen pakkasella. Silloin uuden pumpun toimitusjonot ovat viikkoja ja talo jää kalliin varasähkön varaan.</p><div class="symptom-metric"><span>Hätätoimitusaika talvella</span><strong>2–4 viikon odotus</strong></div></div>
+        </article>
+      </div>
+    </section>
+    <section id="vertailu" class="section-block">
+      <div class="section-intro">
+        <span class="section-kicker">TALOUDEN JA TEKNIIKAN JÄRKIVALINTA</span>
+        <h2>Miksi maksaisit 14 890 EUR turhasta purkamisesta, kun 3 490 EUR riittää?</h2>
+        <p>Maalämpöpumppusi ainoa varsinaisesti kuluva pääosa on kompressori. Suljetussa ja hapettomassa kierrossa vesi muuttuu hapettomaksi, jolloin ruostuminen pysähtyy ja varaajarunko sekä kuparikierukat kestävät vuosikymmeniä.</p>
+      </div>
+      <div class="comparison-grid">
+        <div class="compare-card compare-winner">
+          <div class="winner-badge">SUOSITELTU JÄRKI-INVESTOINTI</div>
+          <h3>Ekowell ennakoiva kompressorinvaihto</h3>
+          <p class="compare-desc">Uudistamme vain kuluneen kompressoriyksikön, kuivaimen ja kylmäaineet yhdessä työpäivässä. Toimivat putkistot ja laiterunko säilyvät ennallaan.</p>
+          <div class="price-box">
+            <div><span class="price-label">AVAIMET KÄTEEN REITILLÄ ALK.</span><strong class="price-value">3 490 EUR</strong></div>
+            <span class="saving-pill">Säästät heti 11 400 EUR</span>
+          </div>
+          <ul class="check-list">
+            <li><strong>1 työpäivän vaivaton asennus</strong> — Talon lämmitys ei katkea pakkasella.</li>
+            <li><strong>Uuden laitteen lämpöteho</strong> — Kuumakaasun tulistus ja COP 4.30 palautuvat.</li>
+            <li><strong>Ei turhaa purkutyötä</strong> — Suljetun hapettoman kierron runko kestää vuosikymmeniä.</li>
+            <li><strong>Matkakulut 0 EUR huoltoreitillä</strong> — Täysi tehdastakuu työlle ja osille.</li>
+          </ul>
+          <a href="#varaus" class="btn-primary btn-full">Pyydä maksuton arvio tai varaa reittipaikka</a>
+        </div>
+        <div class="compare-card compare-loser">
+          <span class="loser-tag">PERINTEINEN LVI-LIIKKEEN TARJOUS</span>
+          <h3>Koko maalämpölaitteiston hätäpurku</h3>
+          <p class="compare-desc">Koko laitekaappi revitään irti, täysin ehjä varaajarunko viedään romuksi ja putkistot rakennetaan kovalla hinnalla uudelleen alusta alkaen.</p>
+          <div class="price-box price-box-muted">
+            <div><span class="price-label">TYYPILLINEN KOKONAISHINTA</span><strong class="price-value-muted">14 890 EUR+</strong></div>
+            <span class="overprice-pill">Tarpeeton ylihinta</span>
+          </div>
+          <ul class="cross-list">
+            <li>Viikkojen odotusaika kovimmalla talvipakkasella.</li>
+            <li>Täysin toimiva laiterunko ja kuparikierukat romutetaan turhaan.</li>
+            <li>Kallis varasähkölämmitys odotusaikana (jopa +800 EUR / kk).</li>
+            <li>Monen päivän purkutyö ja kalliit putkistomuutokset teknisessä tilassa.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="reitit" class="section-block">
+      <div class="section-intro">
+        <span class="section-kicker">VALTAKUNNALLINEN REITITYS — MATKAKULUT 0 EUR</span>
+        <h2>Valitse alueesi seuraavalta huoltoreitiltä</h2>
+        <p>Kun yhdistämme saman seudun kompressorinvaihdot ja kuntotarkastukset samalle reitille, emme veloita lainkaan kilometrikorvauksia. Klikkaa aluettasi ja varmista paikkasi.</p>
+      </div>
+      <div id="route-cards-grid" class="route-grid"></div>
+    </section>
+    <section id="laskuri" class="section-block">
+      <div class="section-intro">
+        <span class="section-kicker">KITKATON PALVELUPOLKU JA SÄÄSTÖLASKURI</span>
+        <h2>Laske säästösi ja tilaa maksuton kartoitus 30 sekunnissa</h2>
+        <p>Valitse tilauksesi tai kartoitustoiveesi yhdellä klikkauksella. Saat aina kiinteän kirjallisen tarjouksen ennen lopullista päätöstä.</p>
+      </div>
+      <div class="calc-booking-grid">
+        <div class="card-surface">
+          <h3>Oman maalämpöpumpun säästölaskuri</h3>
+          <div class="field-group">
+            <label for="model-series">Pumpun mallisarja tai tyyppi</label>
+            <select id="model-series" class="input-control">
+              <option value="EVD">Ekowell EVD (tulistuskierukalla varustettu tehdasvaraaja)</option>
+              <option value="EVT">Ekowell EVT / Muu maalämpöpumppu</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <div class="slider-header"><label for="device-age">Maalämpöpumpun ikä</label><span id="device-age-val" class="mono-val">15 vuotta</span></div>
+            <input type="range" id="device-age" min="8" max="24" value="15" class="range-slider" />
+            <div class="slider-ticks"><span>8 v (Ennakoiva)</span><span>15 v (Vaihtoikä)</span><span>24 v (Yliajalla)</span></div>
+          </div>
+          <div class="field-group">
+            <div class="slider-header"><label for="annual-kwh">Kiinteistön lämmitystarve (kWh / v)</label><span id="annual-kwh-val" class="mono-val">26 000 kWh</span></div>
+            <input type="range" id="annual-kwh" min="12000" max="45000" step="1000" value="26000" class="range-slider" />
+            <div class="slider-ticks"><span>12 000 kWh (Pientalo)</span><span>26 000 kWh (Keskikoko)</span><span>45 000 kWh (Suuri)</span></div>
+          </div>
+          <div class="savings-highlight-box">
+            <span class="highlight-label">VÄLITÖN HANKINTASÄÄSTÖ UUTEEN PUMPPUUN VERRATTUNA</span>
+            <strong id="kpi-capex-saving" class="highlight-number">11 400 EUR</strong>
+            <div class="kpi-subgrid">
+              <div><span>Ekowell-kompressoripaketti</span><strong id="kpi-proactive-price">3 490 EUR</strong></div>
+              <div><span>Sähkösäästö vuodessa</span><strong id="kpi-annual-saving">510 EUR / v</strong></div>
+              <div><span>Palautuva hyötysuhde</span><strong id="kpi-cop-change">3.32 -> 4.30</strong></div>
+              <div><span>10 v kokonaishyöty</span><strong id="kpi-ten-year">16 500 EUR</strong></div>
+            </div>
+          </div>
+          <p id="technical-diagnosis" class="diagnosis-note"></p>
+        </div>
+        <div id="varaus" class="card-surface booking-card-highlight">
+          <span class="section-kicker">30 SEKUNNIN PIKAVARAUS — 100 % SITOUMUKSETON</span>
+          <h3 id="booking-form-headline">Varmista 11 400 EUR säästö — Pyydä maksuton arvio</h3>
+          <form id="booking-form" class="booking-form">
+            <div class="field-group">
+              <label>1. Valitse miten haluat edetä</label>
+              <div class="intent-selector">
+                <label class="intent-option"><input type="radio" name="service_intent" value="Maksuton puhelinkartoitus ja kiinteä tarjous (0 EUR)" checked /><span><strong>Maksuton puhelinkartoitus ja tarjous (0 EUR)</strong><small>Asiantuntija tarkistaa sopivuuden ja laskee tarkan säästön</small></span></label>
+                <label class="intent-option"><input type="radio" name="service_intent" value="Alustava paikkavaraus 0 EUR huoltoreitiltä (alk. 3 490 EUR)" /><span><strong>Varaa paikka 0 EUR huoltoreitiltä (alk. 3 490 EUR)</strong><small>Varmistat paikan alueesi reitiltä ilman matkakuluja</small></span></label>
+                <label class="intent-option"><input type="radio" name="service_intent" value="Ennakoiva kuntotarkastus reitillä (199 EUR, matkat 0 EUR)" /><span><strong>Tilaa pumpun kuntotarkastus reitillä (199 EUR)</strong><small>Täysi tulistus- ja painemittaus paikan päällä</small></span></label>
+              </div>
+            </div>
+            <div class="form-row-2">
+              <div class="field-group"><label for="city">2. Paikkakunta *</label><input type="text" id="city" class="input-control" placeholder="Esim. Tampere" required /></div>
+              <div class="field-group"><label for="customer-contact">3. Puhelinnumero *</label><input type="text" id="customer-contact" class="input-control" placeholder="040 123 4567" required /></div>
+            </div>
+            <details class="optional-details">
+              <summary>Täydennä halutessasi katuosoite ja sarjanumero (tai käytä pikavalintaa)</summary>
+              <div class="optional-body">
+                <div id="quick-fill-pills" class="quick-pills"></div>
+                <div class="form-row-2">
+                  <div class="field-group"><label for="street-address">Katuosoite</label><input type="text" id="street-address" class="input-control" placeholder="Esim. Harjutie 8" /></div>
+                  <div class="field-group"><label for="serial-number">Sarjanumero / vuosi</label><input type="text" id="serial-number" class="input-control" placeholder="Esim. EKO-2012-9844" /></div>
+                </div>
+                <div class="field-group"><label for="booking-notes">Lisätiedot</label><textarea id="booking-notes" rows="2" class="textarea-control" placeholder="Esim. pumpun merkki tai havaitut oireet..."></textarea></div>
+              </div>
+            </details>
+            <button type="submit" class="btn-primary btn-full">Lähetä pyyntö — Saat vahvistuksen ja kiinteän hinnan</button>
+            <div class="trust-guarantees">
+              <span>+ Ei ostopakkoa</span><span>+ Kiinteä tehdashinta</span><span>+ Suoraan Rovaniemen tehtaalta</span>
+            </div>
+          </form>
+          <div id="verification-result" class="verification-box hidden"></div>
+        </div>
+      </div>
+    </section>
+    <details id="asiantuntija" class="expert-drawer">
+      <summary class="expert-drawer-summary">
+        <div><span class="section-kicker">TEKNINEN SYVÄTIETO &amp; TEHDAS-AI</span><strong>Avaa Ekowell-insinöörisparraaja, laitevarmenteet ja tietolähteet (SSoT)</strong></div>
+        <span class="drawer-toggle-hint">Näytä / piilota tekninen osio</span>
+      </summary>
+      <div class="expert-drawer-body">
+        <div class="calc-booking-grid">
+          <div class="card-surface">
+            <h3>Kysy Ekowell-asiantuntijalta (tulistus &amp; kompressorit)</h3>
+            <div class="field-group"><label for="spar-question">Tekninen kysymys</label><textarea id="spar-question" rows="3" class="textarea-control">Miksi varaaja ei ruostu suljetussa ja hapettomassa kierrossa, ja miksi pelkkä kompressorinvaihto riittää?</textarea></div>
+            <button type="button" id="btn-spar" class="btn-secondary">Kysy Ekowell-asiantuntijalta</button>
+            <div id="spar-answer-box" class="spar-answer-box hidden"><div class="spar-meta"><span id="spar-watermark" class="status-pill">DETERMINISTIC_RULES</span></div><p id="spar-answer-text"></p></div>
+          </div>
+          <div class="card-surface">
+            <div class="crud-header">
+              <div><h3>Tietopohja ja reittivaraukset</h3><p class="form-intro">SSoT-tietokannan lähteet ja tallennetut reittivaraukset (<span id="hud-sync">synkronoitu</span>).</p></div>
+              <button type="button" id="btn-toggle-add-source" class="btn-secondary">+ Lisää lähde</button>
+            </div>
+            <form id="source-form" class="source-form hidden">
+              <input type="hidden" id="source-id" value="" />
+              <div class="form-row-2"><input type="text" id="source-title" class="input-control" placeholder="Lähteen otsikko" required /><input type="text" id="source-type" class="input-control" placeholder="Tyyppi (esim. Strategia)" required /></div>
+              <input type="text" id="source-url" class="input-control" placeholder="Viite tai verkko-osoite" />
+              <textarea id="source-summary" rows="2" class="textarea-control" placeholder="Tiivistelmä..." required></textarea>
+              <div class="button-row"><button type="submit" class="btn-primary btn-sm">Tallenna lähde</button><button type="button" id="btn-cancel-source" class="btn-secondary">Peruuta</button></div>
+            </form>
+            <div id="sources-list" class="sources-list"></div>
+            <h4 class="sub-heading">Viimeisimmät reittivaraukset</h4>
+            <div id="leads-list" class="leads-list"></div>
+          </div>
+        </div>
+      </div>
+    </details>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div><strong class="brand-logo">EKOWELL OY</strong><p>Jämytie 1, 96910 Rovaniemi | Puhelin <a href="tel:0400398963">0400 398 963</a> | <a href="mailto:tehdas@ekowell.com">tehdas@ekowell.com</a></p><p class="footer-muted">Maalämpöpumppujen valmistus, huolto ja ennakoivat kompressorinvaihdot yli 20 vuoden kokemuksella koko Suomessa.</p></div>
+      <div class="footer-badges"><span id="hud-provenance" class="status-pill">Suomalainen tehdastyö</span><span id="hud-branch" class="status-pill">Takuu työlle ja kompressorille</span></div>
+    </div>
+  </footer>
+  <script src="static/js/ab_variants.js"></script>
+  <script src="static/js/sources_crud.js"></script>
+  <script src="static/js/app_core.js"></script>
+</body>
+</html>
