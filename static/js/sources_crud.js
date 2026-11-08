@@ -1,5 +1,14 @@
 "use strict";
 
+function escapeHtml(str) {
+  return String(str == null ? "" : str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 function updateSyncClock(isoTimestamp) {
   const el = document.getElementById("hud-sync");
   if (el && isoTimestamp) {
@@ -16,13 +25,13 @@ function renderSourcesList(sources) {
     card.className = "source-card";
     card.innerHTML =
       `<div class="source-card-top">` +
-      `<strong>${src.title}</strong>` +
-      `<span class="status-pill">${src.source_type}</span>` +
+      `<strong>${escapeHtml(src.title)}</strong>` +
+      `<span class="status-pill">${escapeHtml(src.source_type)}</span>` +
       `</div>` +
-      `<p>${src.summary}</p>` +
+      `<p>${escapeHtml(src.summary)}</p>` +
       `<div class="button-row">` +
-      `<button type="button" class="btn-secondary btn-sm" data-edit="${src.id}">Muokkaa</button>` +
-      `<button type="button" class="btn-secondary btn-sm" data-del="${src.id}">Poista</button>` +
+      `<button type="button" class="btn-secondary btn-sm" data-edit="${escapeHtml(src.id)}">Muokkaa</button>` +
+      `<button type="button" class="btn-secondary btn-sm" data-del="${escapeHtml(src.id)}">Poista</button>` +
       `</div>`;
     card.querySelector(`[data-edit="${src.id}"]`).addEventListener("click", () => {
       openSourceEditForm(src);

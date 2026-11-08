@@ -124,9 +124,9 @@ function renderLeadsList(leads) {
     const item = document.createElement("div");
     item.className = "lead-card";
     item.innerHTML =
-      `<div class="source-card-top"><strong>${lead.city} — ${lead.serial_number}</strong><span class="status-pill">${lead.route_cluster}</span></div>` +
-      `<p>${lead.notes || lead.street_address} | Paketti: ${formatEur(lead.estimated_capex_eur)} | Vuosisäästö: ${formatEur(lead.annual_savings_eur)}</p>` +
-      `<div class="button-row"><button type="button" class="btn-secondary btn-sm" data-del-lead="${lead.id}">Poista varaus</button></div>`;
+      `<div class="source-card-top"><strong>${escapeHtml(lead.city)} — ${escapeHtml(lead.serial_number)}</strong><span class="status-pill">${escapeHtml(lead.route_cluster)}</span></div>` +
+      `<p>${escapeHtml(lead.notes || lead.street_address)} | Paketti: ${formatEur(lead.estimated_capex_eur)} | Vuosisäästö: ${formatEur(lead.annual_savings_eur)}</p>` +
+      `<div class="button-row"><button type="button" class="btn-secondary btn-sm" data-del-lead="${escapeHtml(lead.id)}">Poista varaus</button></div>`;
     item.querySelector(`[data-del-lead="${lead.id}"]`).addEventListener("click", async () => {
       try {
         const r = await fetch(`api/leads/${lead.id}`, { method: "DELETE" });
@@ -170,8 +170,8 @@ function setupBookingForm() {
         const v = data.verification;
         box.classList.remove("hidden");
         box.innerHTML =
-          `<strong>Kiitos! Pyyntösi on vastaanotettu (${v.route_cluster})</strong>` +
-          `<p>Valittu palvelu: <strong>${intentText}</strong> (A/B-tulokulma ${variantKey}). Matkakulut reitillä: ${v.travel_fee_eur} EUR (norm. ${v.normal_travel_fee_eur} EUR). Ekowellin tehtaan asiantuntija ottaa yhteyttä numeroon ${payload.customer_contact}.</p>`;
+          `<strong>Kiitos! Pyyntösi on vastaanotettu (${escapeHtml(v.route_cluster)})</strong>` +
+          `<p>Valittu palvelu: <strong>${escapeHtml(intentText)}</strong> (A/B-tulokulma ${escapeHtml(variantKey)}). Matkakulut reitillä: ${escapeHtml(v.travel_fee_eur)} EUR (norm. ${escapeHtml(v.normal_travel_fee_eur)} EUR). Ekowellin tehtaan asiantuntija ottaa yhteyttä numeroon ${escapeHtml(payload.customer_contact)}.</p>`;
         updateSyncClock(data.synced_at);
         await loadInitialState();
         return;
@@ -179,8 +179,8 @@ function setupBookingForm() {
     } catch (_) {}
     box.classList.remove("hidden");
     box.innerHTML =
-      `<strong>Kiitos! Pyyntösi on vastaanotettu (${payload.city} — Ekowell-huoltoreitti)</strong>` +
-      `<p>Valittu palvelu: <strong>${intentText}</strong> (A/B-tulokulma ${variantKey}). Matkakulut reitillä: 0 EUR (norm. 180 EUR). Ekowellin tehtaan asiantuntija ottaa yhteyttä numeroon ${payload.customer_contact} ja vahvistaa kiinteän hinnan.</p>`;
+      `<strong>Kiitos! Pyyntösi on vastaanotettu (${escapeHtml(payload.city)} — Ekowell-huoltoreitti)</strong>` +
+      `<p>Valittu palvelu: <strong>${escapeHtml(intentText)}</strong> (A/B-tulokulma ${escapeHtml(variantKey)}). Matkakulut reitillä: 0 EUR (norm. 180 EUR). Ekowellin tehtaan asiantuntija ottaa yhteyttä numeroon ${escapeHtml(payload.customer_contact)} ja vahvistaa kiinteän hinnan.</p>`;
   });
 }
 
